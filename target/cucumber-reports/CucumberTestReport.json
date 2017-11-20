@@ -1,0 +1,191 @@
+[
+  {
+    "id": "user-creation",
+    "tags": [
+      {
+        "name": "@createUser",
+        "line": 2
+      }
+    ],
+    "description": "",
+    "name": "User Creation",
+    "keyword": "Feature",
+    "line": 3,
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 39000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "id": "user-creation;create-new-user-in-the-system",
+        "before": [
+          {
+            "result": {
+              "duration": 2114000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.before(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Create new user in the system",
+        "keyword": "Scenario",
+        "line": 4,
+        "steps": [
+          {
+            "result": {
+              "duration": 474240000,
+              "status": "passed"
+            },
+            "name": "the Swagger definition at http://petstore.swagger.io/v2/swagger.json",
+            "keyword": "Given ",
+            "line": 5,
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://petstore.swagger.io/v2/swagger.json",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefinitionsRestServices.getSwaggerInformation(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 362181000,
+              "status": "passed"
+            },
+            "name": "user sends a POST request to \"http://petstore.swagger.io/v2/user\"",
+            "keyword": "When ",
+            "line": 6,
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://petstore.swagger.io/v2/user",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefinitionsRestServices.user_sends_a_POST_request_to(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 32276000,
+              "status": "passed"
+            },
+            "name": "content",
+            "keyword": "And ",
+            "line": 7,
+            "doc_string": {
+              "value": "{\n\"id\": 0,\n\"username\": \"Shreejit\",\n\"firstName\": \"string\",\n\"lastName\": \"string\",\n\"email\": \"string\",\n\"password\": \"string\",\n\"phone\": \"string\",\n\"userStatus\": 0\n}",
+              "line": 8,
+              "content_type": ""
+            },
+            "match": {
+              "location": "StepDefinitionsRestServices.content(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 500690000,
+              "status": "passed"
+            },
+            "name": "response status code should be 200",
+            "keyword": "Then ",
+            "line": 20,
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinitionsRestServices.response_status_code_should_be(int)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1476000,
+              "status": "passed"
+            },
+            "name": "response time is within 600 ms",
+            "keyword": "And ",
+            "line": 21,
+            "match": {
+              "arguments": [
+                {
+                  "val": "600",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefinitionsRestServices.response_time_is_within_s(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 927000,
+              "status": "passed"
+            },
+            "name": "response header contains",
+            "keyword": "And ",
+            "line": 22,
+            "match": {
+              "location": "StepDefinitionsRestServices.response_header_contains(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "content-type",
+                  "application/json"
+                ],
+                "line": 24
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 161000,
+              "status": "passed"
+            },
+            "name": "response status line is \"OK\"",
+            "keyword": "And ",
+            "line": 25,
+            "match": {
+              "arguments": [
+                {
+                  "val": "OK",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitionsRestServices.response_status_line_is(String)"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "src/test/java/resources/features/Feature01_CreateNewUser.feature",
+    "comments": [
+      {
+        "value": "#  Create user in the system",
+        "line": 1
+      }
+    ]
+  }
+]

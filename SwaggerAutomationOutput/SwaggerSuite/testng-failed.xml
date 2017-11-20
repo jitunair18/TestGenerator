@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [SwaggerSuite]">
+  <parameter name="swaggerPath" value="http://petstore.swagger.io/v2/swagger.json"/>
+  <test name="SwaggerTest">
+    <parameter name="swaggerPath" value="http://petstore.swagger.io/v2/swagger.json"/>
+    <classes>
+      <class name="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.TestNGTestSuite"/>
+    </classes>
+  </test> <!-- SwaggerTest -->
+  <test name="SwaggerTest(failed)">
+    <parameter name="swaggerPath" value="http://petstore.swagger.io/v2/swagger.json"/>
+    <classes>
+      <class name="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.TestNGTestSuite">
+        <methods>
+          <include name="executeRestfulTest" invocation-numbers="1 2 3 4 5 6 8 9 10 11 13 14 16 17 18 19"/>
+          <include name="testData"/>
+        </methods>
+      </class> <!-- com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.TestNGTestSuite -->
+    </classes>
+  </test> <!-- SwaggerTest(failed) -->
+</suite> <!-- Failed suite [SwaggerSuite] -->

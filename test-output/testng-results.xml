@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="1942" started-at="2017-11-19T00:04:07Z" finished-at="2017-11-19T00:04:09Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@2f514e52]" name="feature" class="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test Feature" duration-ms="1942" started-at="2017-11-19T00:04:07Z" finished-at="2017-11-19T00:04:09Z">
+      <class name="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass(java.lang.String)[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@2f514e52]" name="setUpClass" is-config="true" duration-ms="422" started-at="2017-11-18T19:04:07Z" finished-at="2017-11-18T19:04:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/java/resources/features/Feature01_CreateNewUser.feature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@2f514e52]" name="feature" duration-ms="1436" started-at="2017-11-18T19:04:07Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-11-18T19:04:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User Creation]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@2f514e52]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2017-11-18T19:04:09Z" finished-at="2017-11-18T19:04:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner -->
+    </test> <!-- Test Feature -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

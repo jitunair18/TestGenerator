@@ -1,0 +1,123 @@
+2017-11-18 18:59:22,339 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-18 18:59:23,176 INFO  [Log] Entered: postRequest 
+2017-11-18 18:59:23,176 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-18 18:59:23,714 INFO  [Log] Entered: postContent 
+2017-11-18 18:59:23,714 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-18 18:59:23,715 INFO  [Log] Entered: getMsgType 
+2017-11-18 18:59:23,757 INFO  [Log] Entered: verifyStatusCode 
+2017-11-18 18:59:23,757 INFO  [Log] Expected response status code: 200 
+2017-11-18 18:59:23,757 INFO  [Log] Entered: createResponseObject 
+2017-11-18 18:59:23,757 INFO  [Log] Http request type: POST 
+2017-11-18 18:59:24,388 INFO  [Log] Entered: verifyResponseTime 
+2017-11-18 18:59:24,390 INFO  [Log] Actual response time: 486 
+2017-11-18 18:59:24,391 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-18 18:59:24,393 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-18 18:59:24,393 INFO  [Log] Expected response status line: OK 
+2017-11-18 18:59:24,393 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-18 18:59:24,393 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-18 18:59:24,397 INFO  [Log] START SCENARIO *****: Search user details from system given a user 
+2017-11-18 18:59:24,456 INFO  [Log] Entered: getRequest 
+2017-11-18 18:59:24,456 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-18 18:59:24,457 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-18 18:59:24,461 INFO  [Log] Entered: setRequestHeader 
+2017-11-18 18:59:24,462 INFO  [Log] Entered: verifyStatusCode 
+2017-11-18 18:59:24,462 INFO  [Log] Expected response status code: 200 
+2017-11-18 18:59:24,462 INFO  [Log] Entered: createResponseObject 
+2017-11-18 18:59:24,462 INFO  [Log] Http request type: GET 
+2017-11-18 18:59:24,520 INFO  [Log] Entered: verifyResponseData 
+2017-11-18 18:59:24,520 INFO  [Log] Actual response body generated: com.jayway.restassured.internal.RestAssuredResponseImpl@1dbf4413 
+2017-11-18 18:59:24,898 INFO  [Log] Entered: verifyResponseType 
+2017-11-18 18:59:24,898 INFO  [Log] Expected response type: json 
+2017-11-18 18:59:24,899 INFO  [Log] Entered: verifyResponseTime 
+2017-11-18 18:59:24,899 INFO  [Log] Actual response time: 53 
+2017-11-18 18:59:24,899 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-18 18:59:24,899 INFO  [Log] Expected response status line: OK 
+2017-11-18 18:59:24,899 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-18 18:59:24,900 INFO  [Log] END SCENARIO *****: Search user details from system given a user 
+2017-11-18 19:00:13,133 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-18 19:00:13,623 INFO  [Log] Entered: postRequest 
+2017-11-18 19:00:13,624 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-18 19:00:14,031 INFO  [Log] Entered: postContent 
+2017-11-18 19:00:14,031 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-18 19:00:14,032 INFO  [Log] Entered: getMsgType 
+2017-11-18 19:00:14,068 INFO  [Log] Entered: verifyStatusCode 
+2017-11-18 19:00:14,068 INFO  [Log] Expected response status code: 200 
+2017-11-18 19:00:14,068 INFO  [Log] Entered: createResponseObject 
+2017-11-18 19:00:14,068 INFO  [Log] Http request type: POST 
+2017-11-18 19:00:14,561 INFO  [Log] Entered: verifyResponseTime 
+2017-11-18 19:00:14,563 INFO  [Log] Actual response time: 374 
+2017-11-18 19:00:14,564 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-18 19:00:14,565 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-18 19:00:14,565 INFO  [Log] Expected response status line: OK 
+2017-11-18 19:00:14,565 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-18 19:00:14,566 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-18 19:01:20,805 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-18 19:01:21,297 INFO  [Log] Entered: postRequest 
+2017-11-18 19:01:21,297 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-18 19:01:21,662 INFO  [Log] Entered: postContent 
+2017-11-18 19:01:21,662 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-18 19:01:21,662 INFO  [Log] Entered: getMsgType 
+2017-11-18 19:01:21,696 INFO  [Log] Entered: verifyStatusCode 
+2017-11-18 19:01:21,696 INFO  [Log] Expected response status code: 200 
+2017-11-18 19:01:21,697 INFO  [Log] Entered: createResponseObject 
+2017-11-18 19:01:21,697 INFO  [Log] Http request type: POST 
+2017-11-18 19:01:22,198 INFO  [Log] Entered: verifyResponseTime 
+2017-11-18 19:01:22,199 INFO  [Log] Actual response time: 380 
+2017-11-18 19:01:22,201 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-18 19:01:22,202 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-18 19:01:22,202 INFO  [Log] Expected response status line: OK 
+2017-11-18 19:01:22,202 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-18 19:01:22,202 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-18 19:04:08,025 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-18 19:04:08,507 INFO  [Log] Entered: postRequest 
+2017-11-18 19:04:08,507 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-18 19:04:08,871 INFO  [Log] Entered: postContent 
+2017-11-18 19:04:08,871 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-18 19:04:08,871 INFO  [Log] Entered: getMsgType 
+2017-11-18 19:04:08,904 INFO  [Log] Entered: verifyStatusCode 
+2017-11-18 19:04:08,904 INFO  [Log] Expected response status code: 200 
+2017-11-18 19:04:08,904 INFO  [Log] Entered: createResponseObject 
+2017-11-18 19:04:08,904 INFO  [Log] Http request type: POST 
+2017-11-18 19:04:09,406 INFO  [Log] Entered: verifyResponseTime 
+2017-11-18 19:04:09,407 INFO  [Log] Actual response time: 382 
+2017-11-18 19:04:09,409 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-18 19:04:09,410 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-18 19:04:09,410 INFO  [Log] Expected response status line: OK 
+2017-11-18 19:04:09,410 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-18 19:04:09,411 INFO  [Log] END SCENARIO *****: Create new user in the system 

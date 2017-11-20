@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="1377" started-at="2017-11-15T23:09:23Z" finished-at="2017-11-15T23:09:25Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@e45f292]" name="feature" class="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Command line test" duration-ms="1377" started-at="2017-11-15T23:09:23Z" finished-at="2017-11-15T23:09:25Z">
+      <class name="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@e45f292]" name="setUpClass" is-config="true" duration-ms="335" started-at="2017-11-15T18:09:23Z" finished-at="2017-11-15T18:09:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@e45f292]" name="feature" duration-ms="965" started-at="2017-11-15T18:09:24Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-11-15T18:09:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User Creation Asynchronously]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner@e45f292]" name="tearDownClass" is-config="true" duration-ms="9" started-at="2017-11-15T18:09:25Z" finished-at="2017-11-15T18:09:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

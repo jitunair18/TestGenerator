@@ -1,0 +1,470 @@
+2017-11-07 10:13:28,974 INFO  [Log] Start scenario execution: Create new user in the system 
+2017-11-07 10:13:31,044 INFO  [Log] End scenario execution: Create new user in the system 
+2017-11-07 10:13:31,047 INFO  [Log] Start scenario execution: Search user details from system given a user 
+2017-11-07 10:13:31,540 INFO  [Log] End scenario execution: Search user details from system given a user 
+2017-11-07 10:13:31,547 INFO  [Log] Start scenario execution: Delete available user from system 
+2017-11-07 10:13:31,659 INFO  [Log] End scenario execution: Delete available user from system 
+2017-11-07 10:13:31,660 INFO  [Log] Start scenario execution: Delete unavailable user from system 
+2017-11-07 10:13:31,758 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 10:13:31,761 INFO  [Log] End scenario execution: Delete unavailable user from system 
+2017-11-07 10:13:31,764 INFO  [Log] Start scenario execution: Update existing pet in system 
+2017-11-07 10:13:31,870 INFO  [Log] End scenario execution: Update existing pet in system 
+2017-11-07 10:13:31,872 INFO  [Log] Start scenario execution: Log in a valid user into the system 
+2017-11-07 10:13:31,975 INFO  [Log] End scenario execution: Log in a valid user into the system 
+2017-11-07 10:13:31,978 INFO  [Log] Start scenario execution: Smoke test the environment 
+2017-11-07 10:13:32,010 INFO  [Log] End scenario execution: Smoke test the environment 
+2017-11-07 10:18:30,463 INFO  [Log] Start scenario execution: Create new user in the system 
+2017-11-07 10:18:32,027 INFO  [Log] End scenario execution: Create new user in the system 
+2017-11-07 10:18:32,030 INFO  [Log] Start scenario execution: Search user details from system given a user 
+2017-11-07 10:18:32,396 INFO  [Log] End scenario execution: Search user details from system given a user 
+2017-11-07 10:18:32,403 INFO  [Log] Start scenario execution: Delete available user from system 
+2017-11-07 10:18:32,496 INFO  [Log] End scenario execution: Delete available user from system 
+2017-11-07 10:18:32,497 INFO  [Log] Start scenario execution: Delete unavailable user from system 
+2017-11-07 10:18:32,590 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 10:18:32,592 INFO  [Log] End scenario execution: Delete unavailable user from system 
+2017-11-07 10:18:32,595 INFO  [Log] Start scenario execution: Update existing pet in system 
+2017-11-07 10:18:32,701 INFO  [Log] End scenario execution: Update existing pet in system 
+2017-11-07 10:18:32,703 INFO  [Log] Start scenario execution: Log in a valid user into the system 
+2017-11-07 10:18:32,797 INFO  [Log] End scenario execution: Log in a valid user into the system 
+2017-11-07 10:18:32,799 INFO  [Log] Start scenario execution: Smoke test the environment 
+2017-11-07 10:18:32,836 INFO  [Log] End scenario execution: Smoke test the environment 
+2017-11-07 10:53:04,661 INFO  [Log] Start scenario execution: Create new user in the system 
+2017-11-07 10:53:05,190 INFO  [Log] Entered: postRequest 
+2017-11-07 10:53:05,523 INFO  [Log] Entered: postContent 
+2017-11-07 10:53:05,523 INFO  [Log] Entered: getMsgType 
+2017-11-07 10:53:05,558 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:05,558 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,054 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 10:53:06,057 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-07 10:53:06,058 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 10:53:06,058 INFO  [Log] End scenario execution: Create new user in the system 
+2017-11-07 10:53:06,062 INFO  [Log] Start scenario execution: Search user details from system given a user 
+2017-11-07 10:53:06,116 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 10:53:06,119 INFO  [Log] Entered: setRequestHeader 
+2017-11-07 10:53:06,120 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:06,120 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,186 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 10:53:06,521 INFO  [Log] End scenario execution: Search user details from system given a user 
+2017-11-07 10:53:06,534 INFO  [Log] Start scenario execution: Delete available user from system 
+2017-11-07 10:53:06,573 INFO  [Log] Entered: deleteRequest 
+2017-11-07 10:53:06,574 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 10:53:06,575 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:06,575 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,624 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 10:53:06,625 INFO  [Log] End scenario execution: Delete available user from system 
+2017-11-07 10:53:06,626 INFO  [Log] Start scenario execution: Delete unavailable user from system 
+2017-11-07 10:53:06,662 INFO  [Log] Entered: deleteRequest 
+2017-11-07 10:53:06,662 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 10:53:06,663 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:06,663 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,719 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 10:53:06,720 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 10:53:06,723 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 10:53:06,723 INFO  [Log] End scenario execution: Delete unavailable user from system 
+2017-11-07 10:53:06,726 INFO  [Log] Start scenario execution: Update existing pet in system 
+2017-11-07 10:53:06,762 INFO  [Log] Entered: putRequest 
+2017-11-07 10:53:06,763 INFO  [Log] Entered: postContent 
+2017-11-07 10:53:06,763 INFO  [Log] Entered: getMsgType 
+2017-11-07 10:53:06,766 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:06,766 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,828 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 10:53:06,838 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 10:53:06,838 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 10:53:06,839 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 10:53:06,839 INFO  [Log] End scenario execution: Update existing pet in system 
+2017-11-07 10:53:06,841 INFO  [Log] Start scenario execution: Log in a valid user into the system 
+2017-11-07 10:53:06,876 INFO  [Log] Entered: setRequestQueryParameter 
+2017-11-07 10:53:06,879 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 10:53:06,880 INFO  [Log] Entered: createResponseObject 
+2017-11-07 10:53:06,936 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 10:53:06,937 INFO  [Log] End scenario execution: Log in a valid user into the system 
+2017-11-07 10:53:06,939 INFO  [Log] Start scenario execution: Smoke test the environment 
+2017-11-07 10:53:06,972 INFO  [Log] End scenario execution: Smoke test the environment 
+2017-11-07 11:16:36,652 INFO  [Log] Start scenario execution: Create new user in the system 
+2017-11-07 11:16:37,186 INFO  [Log] Entered: postRequest 
+2017-11-07 11:16:37,534 INFO  [Log] Entered: postContent 
+2017-11-07 11:16:37,534 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:16:37,570 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:37,570 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,073 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:16:38,075 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-07 11:16:38,076 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:16:38,076 INFO  [Log] End scenario execution: Create new user in the system 
+2017-11-07 11:16:38,079 INFO  [Log] Start scenario execution: Search user details from system given a user 
+2017-11-07 11:16:38,131 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:16:38,135 INFO  [Log] Entered: setRequestHeader 
+2017-11-07 11:16:38,136 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:38,136 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,198 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:16:38,474 INFO  [Log] End scenario execution: Search user details from system given a user 
+2017-11-07 11:16:38,480 INFO  [Log] Start scenario execution: Delete available user from system 
+2017-11-07 11:16:38,523 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:16:38,523 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:16:38,524 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:38,524 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,578 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:16:38,578 INFO  [Log] End scenario execution: Delete available user from system 
+2017-11-07 11:16:38,579 INFO  [Log] Start scenario execution: Delete unavailable user from system 
+2017-11-07 11:16:38,617 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:16:38,618 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:16:38,619 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:38,619 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,671 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 11:16:38,672 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:16:38,676 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:16:38,676 INFO  [Log] End scenario execution: Delete unavailable user from system 
+2017-11-07 11:16:38,680 INFO  [Log] Start scenario execution: Update existing pet in system 
+2017-11-07 11:16:38,715 INFO  [Log] Entered: putRequest 
+2017-11-07 11:16:38,715 INFO  [Log] Entered: postContent 
+2017-11-07 11:16:38,715 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:16:38,717 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:38,717 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,813 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:16:38,824 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:16:38,824 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:16:38,825 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:16:38,825 INFO  [Log] End scenario execution: Update existing pet in system 
+2017-11-07 11:16:38,828 INFO  [Log] Start scenario execution: Log in a valid user into the system 
+2017-11-07 11:16:38,866 INFO  [Log] Entered: setRequestQueryParameter 
+2017-11-07 11:16:38,870 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:16:38,870 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:16:38,924 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:16:38,926 INFO  [Log] End scenario execution: Log in a valid user into the system 
+2017-11-07 11:16:38,928 INFO  [Log] Start scenario execution: Smoke test the environment 
+2017-11-07 11:16:38,962 INFO  [Log] End scenario execution: Smoke test the environment 
+2017-11-07 11:29:26,346 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-07 11:29:27,254 INFO  [Log] Entered: postRequest 
+2017-11-07 11:29:27,254 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-07 11:29:27,595 INFO  [Log] Entered: postContent 
+2017-11-07 11:29:27,596 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-07 11:29:27,596 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:29:27,629 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:27,629 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:29:27,629 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:27,629 INFO  [Log] Http request type: POST 
+2017-11-07 11:29:28,170 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:29:28,174 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-07 11:29:28,175 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:29:28,177 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:29:28,177 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-07 11:29:28,181 INFO  [Log] START SCENARIO *****: Search user details from system given a user 
+2017-11-07 11:29:28,231 INFO  [Log] Entered: getRequest 
+2017-11-07 11:29:28,231 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:29:28,231 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:29:28,235 INFO  [Log] Entered: setRequestHeader 
+2017-11-07 11:29:28,236 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:28,236 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:29:28,236 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:28,236 INFO  [Log] Http request type: GET 
+2017-11-07 11:29:28,347 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:29:28,572 INFO  [Log] END SCENARIO *****: Search user details from system given a user 
+2017-11-07 11:29:28,579 INFO  [Log] START SCENARIO *****: Delete available user from system 
+2017-11-07 11:29:28,608 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:29:28,608 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:29:28,609 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:29:28,609 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:28,609 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:29:28,609 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:28,609 INFO  [Log] Http request type: DELETE 
+2017-11-07 11:29:30,394 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:29:30,394 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:29:30,395 INFO  [Log] END SCENARIO *****: Delete available user from system 
+2017-11-07 11:29:30,396 INFO  [Log] START SCENARIO *****: Delete unavailable user from system 
+2017-11-07 11:29:30,428 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:29:30,428 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:29:30,429 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:29:30,430 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:30,430 INFO  [Log] Expected response status code: 404 
+2017-11-07 11:29:30,430 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:30,430 INFO  [Log] Http request type: DELETE 
+2017-11-07 11:29:30,500 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 11:29:30,502 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:29:30,502 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:29:30,502 INFO  [Log] Expected response status line: Not Found 
+2017-11-07 11:29:30,502 INFO  [Log] END SCENARIO *****: Delete unavailable user from system 
+2017-11-07 11:29:30,506 INFO  [Log] START SCENARIO *****: Update existing pet in system 
+2017-11-07 11:29:30,539 INFO  [Log] Entered: putRequest 
+2017-11-07 11:29:30,539 INFO  [Log] Request url : http://petstore.swagger.io/v2/pet 
+2017-11-07 11:29:30,540 INFO  [Log] Entered: postContent 
+2017-11-07 11:29:30,540 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"category": {
+  "id": 0,
+  "name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+  "string"
+],
+"tags": [
+  {
+    "id": 0,
+    "name": "string"
+  }
+],
+"status": "NotAvailable"
+} 
+2017-11-07 11:29:30,540 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:29:30,541 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:30,541 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:29:30,541 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:30,541 INFO  [Log] Http request type: PUT 
+2017-11-07 11:29:30,659 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:29:30,670 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:29:30,670 INFO  [Log] Expected response type: json 
+2017-11-07 11:29:30,670 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:29:30,671 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:29:30,671 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:29:30,671 INFO  [Log] END SCENARIO *****: Update existing pet in system 
+2017-11-07 11:29:30,673 INFO  [Log] START SCENARIO *****: Log in a valid user into the system 
+2017-11-07 11:29:30,709 INFO  [Log] Entered: getRequest 
+2017-11-07 11:29:30,709 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/login 
+2017-11-07 11:29:30,710 INFO  [Log] Entered: setRequestQueryParameter 
+2017-11-07 11:29:30,714 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:29:30,714 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:29:30,714 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:29:30,714 INFO  [Log] Http request type: GET 
+2017-11-07 11:29:30,782 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:29:30,782 INFO  [Log] Expected response type: text 
+2017-11-07 11:29:30,783 INFO  [Log] END SCENARIO *****: Log in a valid user into the system 
+2017-11-07 11:29:30,786 INFO  [Log] START SCENARIO *****: Smoke test the environment 
+2017-11-07 11:29:30,812 INFO  [Log] END SCENARIO *****: Smoke test the environment 
+2017-11-07 11:36:46,015 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-07 11:36:46,534 INFO  [Log] Entered: postRequest 
+2017-11-07 11:36:46,534 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-07 11:36:46,873 INFO  [Log] Entered: postContent 
+2017-11-07 11:36:46,873 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-07 11:36:46,873 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:36:46,907 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:46,907 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:36:46,907 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:46,907 INFO  [Log] Http request type: POST 
+2017-11-07 11:36:47,431 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:36:47,432 INFO  [Log] Actual response time: 416 
+2017-11-07 11:36:47,434 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-07 11:36:47,437 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:36:47,437 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:36:47,437 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 11:36:47,437 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-07 11:36:47,441 INFO  [Log] START SCENARIO *****: Search user details from system given a user 
+2017-11-07 11:36:47,492 INFO  [Log] Entered: getRequest 
+2017-11-07 11:36:47,492 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:36:47,492 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:36:47,497 INFO  [Log] Entered: setRequestHeader 
+2017-11-07 11:36:47,498 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:47,498 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:36:47,498 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:47,498 INFO  [Log] Http request type: GET 
+2017-11-07 11:36:47,567 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:36:47,567 INFO  [Log] Actual response body generated: com.jayway.restassured.internal.RestAssuredResponseImpl@aada850 
+2017-11-07 11:36:47,869 INFO  [Log] END SCENARIO *****: Search user details from system given a user 
+2017-11-07 11:36:47,875 INFO  [Log] START SCENARIO *****: Delete available user from system 
+2017-11-07 11:36:47,905 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:36:47,906 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:36:47,906 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:36:47,907 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:47,907 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:36:47,907 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:47,907 INFO  [Log] Http request type: DELETE 
+2017-11-07 11:36:47,958 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:36:47,958 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:36:47,958 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 11:36:47,959 INFO  [Log] END SCENARIO *****: Delete available user from system 
+2017-11-07 11:36:47,959 INFO  [Log] START SCENARIO *****: Delete unavailable user from system 
+2017-11-07 11:36:47,990 INFO  [Log] Entered: deleteRequest 
+2017-11-07 11:36:47,990 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 11:36:47,991 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 11:36:47,991 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:47,991 INFO  [Log] Expected response status code: 404 
+2017-11-07 11:36:47,991 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:47,991 INFO  [Log] Http request type: DELETE 
+2017-11-07 11:36:48,045 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 11:36:48,047 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:36:48,047 INFO  [Log] Actual response time: 52 
+2017-11-07 11:36:48,047 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:36:48,047 INFO  [Log] Expected response status line: Not Found 
+2017-11-07 11:36:48,047 INFO  [Log] Actual response status line: HTTP/1.1 404 Not Found 
+2017-11-07 11:36:48,048 INFO  [Log] END SCENARIO *****: Delete unavailable user from system 
+2017-11-07 11:36:48,051 INFO  [Log] START SCENARIO *****: Update existing pet in system 
+2017-11-07 11:36:48,075 INFO  [Log] Entered: putRequest 
+2017-11-07 11:36:48,075 INFO  [Log] Request url : http://petstore.swagger.io/v2/pet 
+2017-11-07 11:36:48,076 INFO  [Log] Entered: postContent 
+2017-11-07 11:36:48,076 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"category": {
+  "id": 0,
+  "name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+  "string"
+],
+"tags": [
+  {
+    "id": 0,
+    "name": "string"
+  }
+],
+"status": "NotAvailable"
+} 
+2017-11-07 11:36:48,076 INFO  [Log] Entered: getMsgType 
+2017-11-07 11:36:48,077 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:48,077 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:36:48,077 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:48,077 INFO  [Log] Http request type: PUT 
+2017-11-07 11:36:48,135 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 11:36:48,135 INFO  [Log] Actual response body generated: com.jayway.restassured.internal.RestAssuredResponseImpl@3b3d855c 
+2017-11-07 11:36:48,146 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:36:48,146 INFO  [Log] Expected response type: json 
+2017-11-07 11:36:48,146 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 11:36:48,146 INFO  [Log] Actual response time: 53 
+2017-11-07 11:36:48,147 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 11:36:48,147 INFO  [Log] Expected response status line: OK 
+2017-11-07 11:36:48,147 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 11:36:48,147 INFO  [Log] END SCENARIO *****: Update existing pet in system 
+2017-11-07 11:36:48,149 INFO  [Log] START SCENARIO *****: Log in a valid user into the system 
+2017-11-07 11:36:48,172 INFO  [Log] Entered: getRequest 
+2017-11-07 11:36:48,172 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/login 
+2017-11-07 11:36:48,172 INFO  [Log] Entered: setRequestQueryParameter 
+2017-11-07 11:36:48,176 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 11:36:48,176 INFO  [Log] Expected response status code: 200 
+2017-11-07 11:36:48,176 INFO  [Log] Entered: createResponseObject 
+2017-11-07 11:36:48,176 INFO  [Log] Http request type: GET 
+2017-11-07 11:36:48,234 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 11:36:48,234 INFO  [Log] Expected response type: text 
+2017-11-07 11:36:48,235 INFO  [Log] END SCENARIO *****: Log in a valid user into the system 
+2017-11-07 11:36:48,237 INFO  [Log] START SCENARIO *****: Smoke test the environment 
+2017-11-07 11:36:48,264 INFO  [Log] END SCENARIO *****: Smoke test the environment 
+2017-11-07 12:30:33,051 INFO  [Log] START SCENARIO *****: Create new user in the system 
+2017-11-07 12:30:33,630 INFO  [Log] Entered: postRequest 
+2017-11-07 12:30:33,630 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-07 12:30:34,005 INFO  [Log] Entered: postContent 
+2017-11-07 12:30:34,005 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-07 12:30:34,005 INFO  [Log] Entered: getMsgType 
+2017-11-07 12:30:34,053 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:34,054 INFO  [Log] Expected response status code: 200 
+2017-11-07 12:30:34,054 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:34,054 INFO  [Log] Http request type: POST 
+2017-11-07 12:30:34,639 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 12:30:34,640 INFO  [Log] Actual response time: 448 
+2017-11-07 12:30:34,642 INFO  [Log] Entered: verifyResponseHeader 
+2017-11-07 12:30:34,645 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 12:30:34,645 INFO  [Log] Expected response status line: OK 
+2017-11-07 12:30:34,645 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 12:30:34,645 INFO  [Log] END SCENARIO *****: Create new user in the system 
+2017-11-07 12:30:34,648 INFO  [Log] START SCENARIO *****: Search user details from system given a user 
+2017-11-07 12:30:34,730 INFO  [Log] Entered: getRequest 
+2017-11-07 12:30:34,730 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 12:30:34,731 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 12:30:34,735 INFO  [Log] Entered: setRequestHeader 
+2017-11-07 12:30:34,736 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:34,736 INFO  [Log] Expected response status code: 200 
+2017-11-07 12:30:34,736 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:34,736 INFO  [Log] Http request type: GET 
+2017-11-07 12:30:34,801 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 12:30:34,801 INFO  [Log] Actual response body generated: com.jayway.restassured.internal.RestAssuredResponseImpl@2ca36c87 
+2017-11-07 12:30:35,097 INFO  [Log] END SCENARIO *****: Search user details from system given a user 
+2017-11-07 12:30:35,104 INFO  [Log] START SCENARIO *****: Delete available user from system 
+2017-11-07 12:30:35,202 INFO  [Log] Entered: deleteRequest 
+2017-11-07 12:30:35,202 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 12:30:35,203 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 12:30:35,204 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:35,204 INFO  [Log] Expected response status code: 200 
+2017-11-07 12:30:35,204 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:35,204 INFO  [Log] Http request type: DELETE 
+2017-11-07 12:30:35,256 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 12:30:35,256 INFO  [Log] Expected response status line: OK 
+2017-11-07 12:30:35,256 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 12:30:35,256 INFO  [Log] END SCENARIO *****: Delete available user from system 
+2017-11-07 12:30:35,258 INFO  [Log] START SCENARIO *****: Delete unavailable user from system 
+2017-11-07 12:30:35,295 INFO  [Log] Entered: deleteRequest 
+2017-11-07 12:30:35,295 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-07 12:30:35,296 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-07 12:30:35,297 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:35,297 INFO  [Log] Expected response status code: 404 
+2017-11-07 12:30:35,297 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:35,297 INFO  [Log] Http request type: DELETE 
+2017-11-07 12:30:35,388 WARN  [RequestSpecificationImpl$RestAssuredHttpBuilder] Could not parse content-type: Response does not have a content-type header 
+2017-11-07 12:30:35,389 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 12:30:35,389 INFO  [Log] Actual response time: 88 
+2017-11-07 12:30:35,390 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 12:30:35,390 INFO  [Log] Expected response status line: Not Found 
+2017-11-07 12:30:35,390 INFO  [Log] Actual response status line: HTTP/1.1 404 Not Found 
+2017-11-07 12:30:35,390 INFO  [Log] END SCENARIO *****: Delete unavailable user from system 
+2017-11-07 12:30:35,393 INFO  [Log] START SCENARIO *****: Update existing pet in system 
+2017-11-07 12:30:35,426 INFO  [Log] Entered: putRequest 
+2017-11-07 12:30:35,426 INFO  [Log] Request url : http://petstore.swagger.io/v2/pet 
+2017-11-07 12:30:35,427 INFO  [Log] Entered: postContent 
+2017-11-07 12:30:35,427 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"category": {
+  "id": 0,
+  "name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+  "string"
+],
+"tags": [
+  {
+    "id": 0,
+    "name": "string"
+  }
+],
+"status": "NotAvailable"
+} 
+2017-11-07 12:30:35,427 INFO  [Log] Entered: getMsgType 
+2017-11-07 12:30:35,428 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:35,428 INFO  [Log] Expected response status code: 200 
+2017-11-07 12:30:35,429 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:35,429 INFO  [Log] Http request type: PUT 
+2017-11-07 12:30:35,487 INFO  [Log] Entered: verifyResponseData 
+2017-11-07 12:30:35,487 INFO  [Log] Actual response body generated: com.jayway.restassured.internal.RestAssuredResponseImpl@1484f176 
+2017-11-07 12:30:35,499 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 12:30:35,499 INFO  [Log] Expected response type: json 
+2017-11-07 12:30:35,499 INFO  [Log] Entered: verifyResponseTime 
+2017-11-07 12:30:35,499 INFO  [Log] Actual response time: 54 
+2017-11-07 12:30:35,500 INFO  [Log] Entered: verifyResponseStatusLine 
+2017-11-07 12:30:35,500 INFO  [Log] Expected response status line: OK 
+2017-11-07 12:30:35,500 INFO  [Log] Actual response status line: HTTP/1.1 200 OK 
+2017-11-07 12:30:35,500 INFO  [Log] END SCENARIO *****: Update existing pet in system 
+2017-11-07 12:30:35,503 INFO  [Log] START SCENARIO *****: Log in a valid user into the system 
+2017-11-07 12:30:35,533 INFO  [Log] Entered: getRequest 
+2017-11-07 12:30:35,533 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/login 
+2017-11-07 12:30:35,534 INFO  [Log] Entered: setRequestQueryParameter 
+2017-11-07 12:30:35,537 INFO  [Log] Entered: verifyStatusCode 
+2017-11-07 12:30:35,537 INFO  [Log] Expected response status code: 200 
+2017-11-07 12:30:35,537 INFO  [Log] Entered: createResponseObject 
+2017-11-07 12:30:35,537 INFO  [Log] Http request type: GET 
+2017-11-07 12:30:35,593 INFO  [Log] Entered: verifyResponseType 
+2017-11-07 12:30:35,593 INFO  [Log] Expected response type: text 
+2017-11-07 12:30:35,594 INFO  [Log] END SCENARIO *****: Log in a valid user into the system 
+2017-11-07 12:30:35,596 INFO  [Log] START SCENARIO *****: Smoke test the environment 
+2017-11-07 12:30:35,658 INFO  [Log] END SCENARIO *****: Smoke test the environment 

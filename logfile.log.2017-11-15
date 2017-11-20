@@ -1,0 +1,90 @@
+2017-11-15 16:28:49,449 INFO  [Log] START SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 16:28:50,024 INFO  [Log] Entered: postRequest 
+2017-11-15 16:28:50,024 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-15 16:28:50,433 INFO  [Log] Entered: postContent 
+2017-11-15 16:28:50,433 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-15 16:28:50,434 INFO  [Log] Entered: getMsgType 
+2017-11-15 16:28:50,470 INFO  [Log] END SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 16:28:50,474 INFO  [Log] START SCENARIO *****: Search user details from system given a user 
+2017-11-15 16:28:50,525 INFO  [Log] Entered: getRequest 
+2017-11-15 16:28:50,525 INFO  [Log] Request url : http://petstore.swagger.io/v2/user/{username} 
+2017-11-15 16:28:50,528 INFO  [Log] Entered: setRequestPathParameter 
+2017-11-15 16:28:50,535 INFO  [Log] Entered: setRequestHeader 
+2017-11-15 16:28:50,539 INFO  [Log] Entered: verifyStatusCode 
+2017-11-15 16:28:50,539 INFO  [Log] Expected response status code: 200 
+2017-11-15 16:28:50,539 INFO  [Log] Entered: createResponseObject 
+2017-11-15 16:28:50,539 INFO  [Log] Http request type: GET 
+2017-11-15 16:28:51,091 INFO  [Log] END SCENARIO *****: Search user details from system given a user 
+2017-11-15 17:23:37,841 INFO  [Log] START SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 17:23:38,537 INFO  [Log] Entered: postRequest 
+2017-11-15 17:23:38,537 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-15 17:23:39,007 INFO  [Log] Entered: postContent 
+2017-11-15 17:23:39,008 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-15 17:23:39,008 INFO  [Log] Entered: getMsgType 
+2017-11-15 17:23:39,049 INFO  [Log] END SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:06:04,873 INFO  [Log] START SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:06:05,539 INFO  [Log] Entered: postRequest 
+2017-11-15 18:06:05,539 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-15 18:06:05,976 INFO  [Log] Entered: postContent 
+2017-11-15 18:06:05,976 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-15 18:06:05,976 INFO  [Log] Entered: getMsgType 
+2017-11-15 18:06:06,017 INFO  [Log] END SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:07:24,891 INFO  [Log] START SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:07:25,396 INFO  [Log] Entered: postRequest 
+2017-11-15 18:07:25,397 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-15 18:07:25,795 INFO  [Log] Entered: postContent 
+2017-11-15 18:07:25,795 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-15 18:07:25,795 INFO  [Log] Entered: getMsgType 
+2017-11-15 18:07:25,848 INFO  [Log] END SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:09:24,228 INFO  [Log] START SCENARIO *****: Create new user in the system asynchronously 
+2017-11-15 18:09:24,750 INFO  [Log] Entered: postRequest 
+2017-11-15 18:09:24,751 INFO  [Log] Request url : http://petstore.swagger.io/v2/user 
+2017-11-15 18:09:25,106 INFO  [Log] Entered: postContent 
+2017-11-15 18:09:25,106 INFO  [Log] Message content for endpoint: {
+"id": 0,
+"username": "Shreejit",
+"firstName": "string",
+"lastName": "string",
+"email": "string",
+"password": "string",
+"phone": "string",
+"userStatus": 0
+} 
+2017-11-15 18:09:25,106 INFO  [Log] Entered: getMsgType 
+2017-11-15 18:09:25,144 INFO  [Log] END SCENARIO *****: Create new user in the system asynchronously 

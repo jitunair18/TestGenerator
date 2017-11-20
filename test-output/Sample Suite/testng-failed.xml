@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Sample Suite]">
+  <parameter name="myParameterString" value="KungFu Panda"/>
+  <test name="Sample Test">
+    <parameter name="myParameterString" value="KungFu Panda"/>
+    <classes>
+      <class name="com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestRunner"/>
+    </classes>
+  </test> <!-- Sample Test -->
+</suite> <!-- Failed suite [Sample Suite] -->
