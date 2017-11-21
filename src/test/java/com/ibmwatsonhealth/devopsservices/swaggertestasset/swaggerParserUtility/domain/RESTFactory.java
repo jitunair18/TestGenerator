@@ -1,23 +1,52 @@
 package com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.domain;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringReader;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.X509TrustManager;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.ssl.SSLContextBuilder;
+import org.xml.sax.InputSource;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.domain.utility.Log;
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.config.RestAssuredConfig;
+import com.jayway.restassured.config.SSLConfig;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBody;
 import com.jayway.restassured.specification.RequestSpecification;
-import org.xml.sax.InputSource;
+
+
 import cucumber.api.DataTable;
 
 public class RESTFactory {
@@ -46,7 +75,8 @@ public class RESTFactory {
 		requestType = "GET";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
+		
 
 	}
 
@@ -104,8 +134,8 @@ public class RESTFactory {
 	 * Verify http expected response content
 	 * 
 	 * @param Datable
-	 *            Datatable payload with expected keys / xpath / json path expected
-	 *            in http response object defined in feature file
+	 *            Datatable payload with expected keys / xpath / json path
+	 *            expected in http response object defined in feature file
 	 * @return void
 	 */
 	public void verifyResponseData(DataTable payloadTable) throws ParseException, IOException {
@@ -146,8 +176,8 @@ public class RESTFactory {
 	 * Verify http expected response headers
 	 * 
 	 * @param Datable
-	 *            Datatable payload with expected response header key value pairs in
-	 *            http response object defined in feature file
+	 *            Datatable payload with expected response header key value
+	 *            pairs in http response object defined in feature file
 	 * @return void
 	 */
 	public void verifyResponseHeader(DataTable payloadTable) throws ParseException, IOException {
@@ -176,8 +206,8 @@ public class RESTFactory {
 	 * Verify http expected response cookies
 	 * 
 	 * @param Datable
-	 *            Datatable payload with expected response cookie key value pairs in
-	 *            http response object defined in feature file
+	 *            Datatable payload with expected response cookie key value
+	 *            pairs in http response object defined in feature file
 	 * @return void
 	 */
 	public void verifyResponseCookie(DataTable payloadTable) throws ParseException, IOException {
@@ -235,7 +265,8 @@ public class RESTFactory {
 	 * Verify http expected response status line / message
 	 * 
 	 * @param sExpectedResponseStatusLine
-	 *            Expected response status line for endpoint defined in feature file
+	 *            Expected response status line for endpoint defined in feature
+	 *            file
 	 * @return void
 	 */
 	public void verifyResponseStatusLine(String sExpectedResponseStatusLine) throws ParseException, IOException {
@@ -276,7 +307,7 @@ public class RESTFactory {
 		requestType = "POST";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
 
 	}
 
@@ -295,7 +326,7 @@ public class RESTFactory {
 		requestType = "PUT";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
 
 	}
 
@@ -314,7 +345,7 @@ public class RESTFactory {
 		requestType = "DELETE";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
 
 	}
 
@@ -333,7 +364,7 @@ public class RESTFactory {
 		requestType = "PATCH";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
 
 	}
 
@@ -443,7 +474,8 @@ public class RESTFactory {
 	 * Set headers in http request object
 	 * 
 	 * @param Datatable
-	 *            Datatable with request header parameters defined in feature file
+	 *            Datatable with request header parameters defined in feature
+	 *            file
 	 * @return void
 	 */
 	public void setRequestHeader(DataTable headerParameterPayload) {
@@ -510,6 +542,7 @@ public class RESTFactory {
 
 		case "POST":
 			httpResponse = httpRequest.when().post(getURL);
+			System.out.println(httpResponse.getBody().asString());
 			break;
 
 		case "PUT":
@@ -581,7 +614,7 @@ public class RESTFactory {
 		// get username value from response object to store in memory
 		// String variableValue =
 		// JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
-		String variableValue = JsonPath.from((String) globalDataDictionary.get("requestContent")).getString(inputData);
+		String variableValue = JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
 		globalDataDictionary.put(inputData.toUpperCase(), variableValue);
 
 	}
@@ -602,7 +635,7 @@ public class RESTFactory {
 		requestType = "ASYNCHRONOUSGET";
 		httpRequest = null;
 		httpResponse = null;
-		httpRequest = RestAssured.given();
+		httpRequest = RestAssured.given().config(getSSLCert());
 
 	}
 
@@ -616,5 +649,74 @@ public class RESTFactory {
 	public void setAsynchronousRequestTimeOutParameters(int timeout) {
 		globalDataDictionary.put("responseWaitTime", timeout);
 
+	}
+
+	@SuppressWarnings("deprecation")
+	public RestAssuredConfig getSSLCert() {
+		//Str password = "ZjA0YTU1MT".toCharArray();
+		KeyStore keyStore = null;
+		KeyStore truststore = null;
+		SSLConfig config = null;
+		RestAssuredConfig restConfig = null;
+		SSLContext context = null;
+		
+		SSLSocketFactory clientAuthFactory = null;
+
+			try {
+
+				keyStore = KeyStore.getInstance("jks");
+				keyStore.load(new FileInputStream("all/jks/keystore.jks"), "ZjA0YTU1MT".toCharArray());
+				truststore = KeyStore.getInstance("jks");
+				truststore.load(new FileInputStream(new File("all/jks/truststore.jks")),
+						"ZjA0YTU1MT".toCharArray());
+				KeyStore keystore = KeyStore.getInstance("jks");
+				keystore.load(new FileInputStream(new File("all/jks/keystore.jks")),
+						"ZjA0YTU1MT".toCharArray());
+				SSLContextBuilder builder = new SSLContextBuilder();
+				builder.loadKeyMaterial(keystore, "ZjA0YTU1MT".toCharArray());
+				builder.loadTrustMaterial(truststore, new TrustStrategy() {
+					@Override
+					public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+						return true;
+					}
+				});
+				context = builder.build();
+		
+		
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (KeyStoreException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (CertificateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnrecoverableKeyException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (KeyManagementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+
+			
+			// set the config in rest assured
+			clientAuthFactory = new SSLSocketFactory(context, new String[] { "TLSv1", "TLSv1.1", "TLSv1.2" }, null, null);
+			config = new SSLConfig().with().sslSocketFactory(clientAuthFactory).and().allowAllHostnames();
+			
+			System.out.println("config set>>>>>>>>>");
+			restConfig = RestAssured.config().sslConfig(config);
+			System.out.println("config returned>>>>>>>>>");
+		//}
+		return restConfig;
 	}
 }
