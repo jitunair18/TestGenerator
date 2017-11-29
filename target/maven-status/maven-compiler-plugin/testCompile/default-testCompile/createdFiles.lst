@@ -1,5 +1,6 @@
 com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/domain/RESTFactory.class
 com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/domain/utility/UtilityFunctions.class
+com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/domain/RESTFactory$1.class
 com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/runner/TestHarnessDriver.class
 com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/runner/TestRunner.class
 com/ibmwatsonhealth/devopsservices/swaggertestasset/swaggerParserUtility/stepdefinitions/StepDefinitionsRestServices.class

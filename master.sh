@@ -11,5 +11,5 @@ echo $pathname
 dirName=$(basename $pathname)
 echo $dirName
 echo $STATUS
-# echo mylogReport=./logfile.log  >>  "%qm_AttachmentsFile%" 
+echo mylogReport=./logfile.log  >>  "%qm_AttachmentsFile%" 
 exit $STATUS

@@ -1,34 +1,30 @@
 [
   {
-    "id": "user-creation",
-    "tags": [
+    "comments": [
       {
-        "name": "@createUser",
-        "line": 2
+        "line": 1,
+        "value": "# TCERID: 5970"
+      },
+      {
+        "line": 2,
+        "value": "# TEST CASE: ANA _ DM Creation of relational database multiple tables with schema."
+      },
+      {
+        "line": 3,
+        "value": "# Description: The service provides the ability to create one or more relational database tables with a particular schema,"
+      },
+      {
+        "line": 4,
+        "value": "#via the use of a create datamart REST API, in which a SQL schema is included as part of the request."
       }
     ],
-    "description": "",
-    "name": "User Creation",
-    "keyword": "Feature",
-    "line": 3,
+    "line": 6,
     "elements": [
       {
-        "after": [
-          {
-            "result": {
-              "duration": 39000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.after(Scenario)"
-            }
-          }
-        ],
-        "id": "user-creation;create-new-user-in-the-system",
         "before": [
           {
             "result": {
-              "duration": 2114000,
+              "duration": 1588911,
               "status": "passed"
             },
             "match": {
@@ -36,72 +32,281 @@
             }
           }
         ],
+        "line": 7,
+        "name": "Create new SQL DDL Schema in Datamart",
         "description": "",
-        "name": "Create new user in the system",
+        "id": "datamart-sql-ddl-schema-creation;create-new-sql-ddl-schema-in-datamart",
+        "after": [
+          {
+            "result": {
+              "duration": 65082,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
         "keyword": "Scenario",
-        "line": 4,
         "steps": [
           {
             "result": {
-              "duration": 474240000,
-              "status": "passed"
+              "duration": 323709303,
+              "error_message": "java.lang.IllegalArgumentException: SSL context may not be null\n\tat org.apache.http.util.Args.notNull(Args.java:54)\n\tat org.apache.http.conn.ssl.SSLSocketFactory.\u003cinit\u003e(SSLSocketFactory.java:349)\n\tat com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.domain.RESTFactory.getSSLCert(RESTFactory.java:718)\n\tat com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.domain.RESTFactory.postRequest(RESTFactory.java:307)\n\tat com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.stepdefinitions.StepDefinitionsRestServices.user_sends_a_POST_request_to(StepDefinitionsRestServices.java:147)\n\tat ✽.When user sends a POST request to \"https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/\"(src/test/java/resources/features/Feature011_CreateSqlDataMartSchema.feature:9)\n",
+              "status": "failed"
             },
-            "name": "the Swagger definition at http://petstore.swagger.io/v2/swagger.json",
-            "keyword": "Given ",
-            "line": 5,
+            "line": 9,
+            "name": "user sends a POST request to \"https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "http://petstore.swagger.io/v2/swagger.json",
-                  "offset": 26
-                }
-              ],
-              "location": "StepDefinitionsRestServices.getSwaggerInformation(String)"
-            }
-          },
-          {
-            "result": {
-              "duration": 362181000,
-              "status": "passed"
-            },
-            "name": "user sends a POST request to \"http://petstore.swagger.io/v2/user\"",
-            "keyword": "When ",
-            "line": 6,
-            "match": {
-              "arguments": [
-                {
-                  "val": "http://petstore.swagger.io/v2/user",
+                  "val": "https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/",
                   "offset": 30
                 }
               ],
               "location": "StepDefinitionsRestServices.user_sends_a_POST_request_to(String)"
-            }
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 32276000,
-              "status": "passed"
+              "status": "skipped"
             },
+            "line": 10,
+            "name": "header with",
+            "match": {
+              "location": "StepDefinitionsRestServices.header_with(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Accept",
+                  "application/json"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "iv-user",
+                  "hatestdb2"
+                ],
+                "line": 13
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
             "name": "content",
-            "keyword": "And ",
-            "line": 7,
-            "doc_string": {
-              "value": "{\n\"id\": 0,\n\"username\": \"Shreejit\",\n\"firstName\": \"string\",\n\"lastName\": \"string\",\n\"email\": \"string\",\n\"password\": \"string\",\n\"phone\": \"string\",\n\"userStatus\": 0\n}",
-              "line": 8,
-              "content_type": ""
-            },
             "match": {
               "location": "StepDefinitionsRestServices.content(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 15,
+              "value": "{\"mode\":\"private\", \"name\":\"test_export\", \"description\":\"testing\", \"owner\":\"hatestdb2\", \"datamartType\":\"db2native\", \"schema\":\"CREATE TABLE TEST2 (id bigint NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1), FIELD1 varchar(255) NOT NULL, FIELD2 bigint NOT NULL, PRIMARY KEY (id));\" }  \n"
             }
           },
           {
             "result": {
-              "duration": 500690000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "name": "response status code should be 200",
-            "keyword": "Then ",
+            "comments": [
+              {
+                "line": 19,
+                "value": "# set variable data mart id from previous step"
+              }
+            ],
             "line": 20,
+            "name": "response value \"id\" is stored",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitionsRestServices.response_value_is_stored(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "response status code should be 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinitionsRestServices.response_status_code_should_be(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 23,
+                "value": "# check if asynchronous processing is completed"
+              },
+              {
+                "line": 24,
+                "value": "# variables tagged {global} would be resolved before execution"
+              },
+              {
+                "line": 25,
+                "value": "# build the http request object"
+              }
+            ],
+            "line": 26,
+            "name": "user sends asynchronous GET request to \"https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/{id}\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/{id}",
+                  "offset": 40
+                }
+              ],
+              "location": "StepDefinitionsRestServices.user_sends_asynchronous_GET_request_to(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "path parameter with",
+            "match": {
+              "location": "StepDefinitionsRestServices.path_parameter_with(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "id",
+                  "{global}"
+                ],
+                "line": 29
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "header with",
+            "match": {
+              "location": "StepDefinitionsRestServices.header_with(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ],
+                "line": 31
+              },
+              {
+                "cells": [
+                  "Accept",
+                  "application/json"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "iv-user",
+                  "hatestdb2"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 34,
+                "value": "# keep actively polling till \"status\" field in response changes to \"DONE\""
+              }
+            ],
+            "line": 35,
+            "name": "waits on \"status\" to be \"Done\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 10
+                },
+                {
+                  "val": "Done",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitionsRestServices.waits_on_to_be(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "maxTimeOut is 500 seconds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefinitionsRestServices.maxtimeout_is_ms(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 37,
+                "value": "# start running assertions on the response"
+              }
+            ],
+            "line": 38,
+            "name": "response status code should be 200",
             "match": {
               "arguments": [
                 {
@@ -110,34 +315,15 @@
                 }
               ],
               "location": "StepDefinitionsRestServices.response_status_code_should_be(int)"
-            }
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1476000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "name": "response time is within 600 ms",
-            "keyword": "And ",
-            "line": 21,
-            "match": {
-              "arguments": [
-                {
-                  "val": "600",
-                  "offset": 24
-                }
-              ],
-              "location": "StepDefinitionsRestServices.response_time_is_within_s(String)"
-            }
-          },
-          {
-            "result": {
-              "duration": 927000,
-              "status": "passed"
-            },
+            "line": 39,
             "name": "response header contains",
-            "keyword": "And ",
-            "line": 22,
             "match": {
               "location": "StepDefinitionsRestServices.response_header_contains(DataTable)"
             },
@@ -147,25 +333,24 @@
                   "key",
                   "value"
                 ],
-                "line": 23
+                "line": 40
               },
               {
                 "cells": [
                   "content-type",
                   "application/json"
                 ],
-                "line": 24
+                "line": 41
               }
-            ]
+            ],
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 161000,
-              "status": "passed"
+              "status": "skipped"
             },
+            "line": 42,
             "name": "response status line is \"OK\"",
-            "keyword": "And ",
-            "line": 25,
             "match": {
               "arguments": [
                 {
@@ -174,17 +359,21 @@
                 }
               ],
               "location": "StepDefinitionsRestServices.response_status_line_is(String)"
-            }
+            },
+            "keyword": "And "
           }
-        ],
-        "type": "scenario"
+        ]
       }
     ],
-    "uri": "src/test/java/resources/features/Feature01_CreateNewUser.feature",
-    "comments": [
+    "name": "DataMart SQL DDL Schema creation",
+    "description": "",
+    "id": "datamart-sql-ddl-schema-creation",
+    "keyword": "Feature",
+    "uri": "src/test/java/resources/features/Feature011_CreateSqlDataMartSchema.feature",
+    "tags": [
       {
-        "value": "#  Create user in the system",
-        "line": 1
+        "line": 5,
+        "name": "@createSqlSchemaDataMart"
       }
     ]
   }
