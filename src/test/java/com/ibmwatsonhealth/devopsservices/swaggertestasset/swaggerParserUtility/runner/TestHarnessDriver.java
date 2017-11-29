@@ -29,6 +29,7 @@ public class TestHarnessDriver {
         xmlSuite.setTests(Arrays.asList(xmlTest));
         testng.setXmlSuites(Arrays.asList(xmlSuite));
         testng.run();
+        System.out.println("TESTNG Scenario Execution Status:" + testng.getStatus());
         System.exit(testng.getStatus());
 		
 	}
