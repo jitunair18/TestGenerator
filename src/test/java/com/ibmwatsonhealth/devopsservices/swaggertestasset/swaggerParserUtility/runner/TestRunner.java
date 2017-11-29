@@ -46,6 +46,7 @@ public class TestRunner {
 	    f.setAccessible(true);                                                             //suppress any access issues when looking at f
 	    Map<String, Object> memberValues = (Map<String, Object>) f.get(proxyHandler);      //get the key-value map for the proxy
 	    memberValues.remove(key);                                                          //renove the key entry...don't worry, we'll add it back
+	    memberValues.get(key);
 	    memberValues.put(key,newValue);                                                    //add the new key-value pair. The annotation is now updated.
 	}//end method
 

@@ -604,7 +604,9 @@ public class RESTFactory {
 	// set global variables for the test scenarios
 	public void setGlobalVariablesfromResponse(String inputData) {
 
+		
 		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		String variableValue = null;
 		if (httpResponse != null) {
 
 		} else {
@@ -615,7 +617,12 @@ public class RESTFactory {
 		// get username value from response object to store in memory
 		// String variableValue =
 		// JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
-		String variableValue = JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
+		try {
+		variableValue = JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
+		}catch(Exception e) {
+			Log.error("Message not found in response: "+ inputData, e);
+			fail("Message not found in response: "+ inputData + " Http Response:" + httpResponse.getBody().asString());
+		}
 		System.out.print("Set global key: " + inputData);
 		System.out.print("Set global value: " + variableValue);
 		globalDataDictionary.put(inputData.toUpperCase(), variableValue);
@@ -686,7 +693,6 @@ public class RESTFactory {
 			context = builder.build();
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (KeyStoreException e) {
 			// TODO Auto-generated catch block

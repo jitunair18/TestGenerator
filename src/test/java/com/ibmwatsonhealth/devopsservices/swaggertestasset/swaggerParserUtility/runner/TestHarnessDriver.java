@@ -29,6 +29,7 @@ public class TestHarnessDriver {
         xmlSuite.setTests(Arrays.asList(xmlTest));
         testng.setXmlSuites(Arrays.asList(xmlSuite));
         testng.run();
+        System.exit(testng.getStatus());
 		
 	}
 	
