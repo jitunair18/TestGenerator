@@ -3,7 +3,6 @@ package com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,22 +19,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
-import javax.net.ssl.X509TrustManager;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.xml.sax.InputSource;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.domain.utility.Log;
 import com.jayway.restassured.RestAssured;
@@ -45,9 +36,9 @@ import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBody;
 import com.jayway.restassured.specification.RequestSpecification;
-
 import cucumber.api.DataTable;
 
+@SuppressWarnings("deprecation")
 public class RESTFactory {
 
 	static RequestSpecification httpRequest = null;
@@ -67,8 +58,8 @@ public class RESTFactory {
 	 */
 	public void getRequest(String url) throws ClientProtocolException, IOException {
 
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		System.out.println("Entered method: getRequest()");
+		Log.info("Endpoint Request url : " + url);
 		getURL = url;
 		// make a get request
 		requestType = "GET";
@@ -87,7 +78,7 @@ public class RESTFactory {
 	 */
 	public void verifyStatusCode(int statusCode) throws ClientProtocolException, IOException {
 
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyStatusCode()");
 		Log.info("Expected response status code: " + statusCode);
 
 		if (httpResponse != null) {
@@ -109,7 +100,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseType(String type) {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseType()");
 		Log.info("Expected response type: " + type);
 		String mimeType = null;
 
@@ -124,6 +115,7 @@ public class RESTFactory {
 			assertTrue(true);
 		} else {
 			fail("Actual response type: " + mimeType + " Expected response type: " + type);
+			Log.fatal("Actual response type: " + mimeType + " Expected response type: " + type);
 		}
 
 	}
@@ -137,7 +129,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseData(DataTable payloadTable) throws ParseException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseData()");
 		ResponseBody<?> body = null;
 
 		List<List<String>> payload = payloadTable.raw();
@@ -179,7 +171,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseHeader(DataTable payloadTable) throws ParseException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseHeader()");
 
 		List<List<String>> payload = payloadTable.raw();
 
@@ -209,7 +201,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseCookie(DataTable payloadTable) throws ParseException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseCookie()");
 
 		List<List<String>> payload = payloadTable.raw();
 
@@ -237,7 +229,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseTime(String sTime) throws ParseException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseCookie()");
 		long actualResponseTime = 0;
 		if (httpResponse != null) {
 			actualResponseTime = httpResponse.getTimeIn(TimeUnit.MILLISECONDS);
@@ -247,12 +239,14 @@ public class RESTFactory {
 			actualResponseTime = httpResponse.getTimeIn(TimeUnit.MILLISECONDS);
 
 		}
-		Log.info("Actual response time: " + actualResponseTime);
+		Log.info("Actual Endpoint response time: " + actualResponseTime);
 		long expectedResponseTime = Long.parseLong(sTime);
 		if (actualResponseTime <= expectedResponseTime) {
 			assertTrue(true);
 		} else {
 			fail("Actual response Time MILLISECONDS: " + actualResponseTime + " Expected response time MILLISECONDS: "
+					+ expectedResponseTime);
+			Log.fatal("Actual response Time MILLISECONDS: " + actualResponseTime + " Expected response time MILLISECONDS: "
 					+ expectedResponseTime);
 
 		}
@@ -267,7 +261,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void verifyResponseStatusLine(String sExpectedResponseStatusLine) throws ParseException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: verifyResponseStatusLine()");
 		Log.info("Expected response status line: " + sExpectedResponseStatusLine);
 		String sActualResponseStatusLine = null;
 		if (httpResponse != null) {
@@ -285,6 +279,8 @@ public class RESTFactory {
 		} else {
 			fail("Actual response status line: " + sActualResponseStatusLine + "Expected response status line: "
 					+ sExpectedResponseStatusLine);
+			Log.fatal("Actual response status line: " + sActualResponseStatusLine + "Expected response status line: "
+					+ sExpectedResponseStatusLine);
 		}
 
 	}
@@ -297,8 +293,8 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void postRequest(String url) throws ClientProtocolException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		System.out.println("Entered method: postRequest()");
+		Log.info("Endpoint Request url : " + url);
 
 		getURL = url;
 		requestType = "POST";
@@ -316,8 +312,8 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void putRequest(String url) throws ClientProtocolException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		System.out.println("Entered method: putRequest()");
+		Log.info("Endpoint Request url : " + url);
 
 		getURL = url;
 		requestType = "PUT";
@@ -335,8 +331,8 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void deleteRequest(String url) throws ClientProtocolException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		System.out.println("Entered method: deleteRequest()");
+		Log.info("Endpoint Request url : " + url);
 
 		getURL = url;
 		requestType = "DELETE";
@@ -354,8 +350,8 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void patchRequest(String url) throws ClientProtocolException, IOException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		System.out.println("Entered method: patchRequest()");
+		Log.info("Endpoint Request url : " + url);
 
 		getURL = url;
 		requestType = "PATCH";
@@ -373,8 +369,8 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void postContent(String message) {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Message content for endpoint: " + message);
+		System.out.println("Entered method: postContent()");
+		Log.info("Message content POSTED for endpoint: " + message);
 		globalDataDictionary.put("requestContent", message);
 
 		String messageType = getMsgType(message);
@@ -410,7 +406,7 @@ public class RESTFactory {
 
 		default:
 			fail("Invalid message type passed in scenario content");
-			Log.warn("Unsupported message type found");
+			Log.fatal("Unsupported message type found");
 			break;
 
 		}
@@ -427,7 +423,7 @@ public class RESTFactory {
 	 */
 	public void setRequestPathParameter(DataTable pathParameterPayload) {
 
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: setRequestPathParameter()");
 
 		List<List<String>> payload = pathParameterPayload.raw();
 		for (int i = 1; i < payload.size(); i++) {
@@ -439,6 +435,7 @@ public class RESTFactory {
 				parameterValue = resolveGlobalVariable(parameterName);
 
 			}
+			Log.info("Path parameter: "+ parameterName + " Value: " + parameterValue);
 			httpRequest.pathParam(parameterName, parameterValue);
 
 		}
@@ -453,7 +450,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void setRequestQueryParameter(DataTable queryParameterPayload) {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: setRequestQueryParameter()");
 
 		List<List<String>> payload = queryParameterPayload.raw();
 		for (int i = 1; i < payload.size(); i++) {
@@ -462,6 +459,7 @@ public class RESTFactory {
 			String queryParameterName = payload.get(i).get(0);
 			String queryParameterValue = payload.get(i).get(1);
 			httpRequest.queryParam(queryParameterName, queryParameterValue);
+			Log.info("Query parameter: "+ queryParameterName + " Value: " + queryParameterValue);
 
 		}
 
@@ -475,7 +473,7 @@ public class RESTFactory {
 	 * @return void
 	 */
 	public void setRequestHeader(DataTable headerParameterPayload) {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: setRequestHeader()");
 
 		List<List<String>> payload = headerParameterPayload.raw();
 		for (int i = 1; i < payload.size(); i++) {
@@ -483,6 +481,7 @@ public class RESTFactory {
 			String headerParameterName = payload.get(i).get(0);
 			String headerParameterValue = payload.get(i).get(1);
 			httpRequest.header(headerParameterName, headerParameterValue);
+			Log.info("Request header : "+ headerParameterName + " Value: " + headerParameterValue);
 		}
 
 	}
@@ -495,7 +494,7 @@ public class RESTFactory {
 	 * @return Output message type of given input message
 	 */
 	public String getMsgType(String message) {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: getMsgType()");
 		String returnContent = null;
 		try {
 			new ObjectMapper().readTree(message);
@@ -527,34 +526,33 @@ public class RESTFactory {
 	 * @throws NumberFormatException
 	 */
 	public void createResponseObject() {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Http request type: " + requestType.toUpperCase());
-
+		System.out.println("Entered method: createResponseObject()");
+		
 		switch (requestType.toUpperCase()) {
 
 		case "GET":
 			httpResponse = httpRequest.when().get(getURL);
-			System.out.println(httpResponse.getBody().asString());
+			System.out.println("Response content: "+ httpResponse.getBody().asString());
 			break;
 
 		case "POST":
 			httpResponse = httpRequest.when().post(getURL);
-			System.out.println(httpResponse.getBody().asString());
+			System.out.println("Response content: "+httpResponse.getBody().asString());
 			break;
 
 		case "PUT":
 			httpResponse = httpRequest.when().put(getURL);
-			System.out.println(httpResponse.getBody().asString());
+			System.out.println("Response content: "+httpResponse.getBody().asString());
 			break;
 
 		case "DELETE":
 			httpResponse = httpRequest.when().delete(getURL);
-			System.out.println(httpResponse.getBody().asString());
+			System.out.println("Response content: "+httpResponse.getBody().asString());
 			break;
 
 		case "PATCH":
 			httpResponse = httpRequest.when().patch(getURL);
-			System.out.println(httpResponse.getBody().asString());
+			System.out.println("Response content: "+httpResponse.getBody().asString());
 			break;
 
 		case "ASYNCHRONOUSGET":
@@ -568,6 +566,7 @@ public class RESTFactory {
 
 			} catch (InterruptedException e) {
 
+				e.printStackTrace();
 				Log.error("Asynchronous execution interrupted:", e);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -582,7 +581,7 @@ public class RESTFactory {
 	// custom active polling to an API to support Asynchronous behavior
 	public Response waitForApiResponse(String searchXpath, String expectedValue, int timeout)
 			throws InterruptedException {
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: waitForApiResponse()");
 		Response result = null;
 		long maxTimeOut = timeout * 1000;
 		long lStartTime = System.currentTimeMillis();
@@ -598,6 +597,7 @@ public class RESTFactory {
 			}
 		}
 		fail("Timed out after waiting for " + timeout + " seconds" + " Endpoint: " + getURL);
+		Log.fatal("Timed out after waiting for " + timeout + " seconds" + " Endpoint: " + getURL);
 		return result;
 	}
 
@@ -605,7 +605,7 @@ public class RESTFactory {
 	public void setGlobalVariablesfromResponse(String inputData) {
 
 		
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+		System.out.println("Entered method: setGlobalVariablesfromResponse()");
 		String variableValue = null;
 		if (httpResponse != null) {
 
@@ -632,6 +632,7 @@ public class RESTFactory {
 	// resolve global variable value
 	public String resolveGlobalVariable(String inputVariable) {
 
+		System.out.println("Entered method: resolveGlobalVariable()");
 		System.out.println("Global variable: " + inputVariable + "Resolved: "
 				+ (String) globalDataDictionary.get(inputVariable.toUpperCase()));
 		return (String) globalDataDictionary.get(inputVariable.toUpperCase());
@@ -640,8 +641,9 @@ public class RESTFactory {
 	// set up asynchronous request type
 	public void getAsynchronousRequest(String url) {
 
-		Log.info("Entered: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		Log.info("Request url : " + url);
+		
+		System.out.println("Entered method: getAsynchronousRequest()");
+		Log.info("Endpoint Request url : " + url);
 		getURL = url;
 		// make a get request
 		requestType = "ASYNCHRONOUSGET";
@@ -653,19 +655,20 @@ public class RESTFactory {
 
 	// set asynchronous request parameters
 	public void setAsynchronousRequestParameters(String waitParameterName, String waitParameterDesiredValue) {
+		System.out.println("Entered method: setAsynchronousRequestParameters()");
 		globalDataDictionary.put("responseWaitParameterName", waitParameterName);
 		globalDataDictionary.put("responseWaitParameterValue", waitParameterDesiredValue);
 
 	}
 
 	public void setAsynchronousRequestTimeOutParameters(int timeout) {
+		System.out.println("Entered method: setAsynchronousRequestTimeOutParameters()");
 		globalDataDictionary.put("responseWaitTime", timeout);
 
 	}
 
-	@SuppressWarnings("deprecation")
 	public RestAssuredConfig getSSLCert() {
-		// Str password = "ZjA0YTU1MT".toCharArray();
+		System.out.println("Entered method: getSSLCert()");
 		KeyStore keyStore = null;
 		KeyStore truststore = null;
 		SSLConfig config = null;
@@ -718,9 +721,9 @@ public class RESTFactory {
 		clientAuthFactory = new SSLSocketFactory(context, new String[] { "TLSv1", "TLSv1.1", "TLSv1.2" }, null, null);
 		config = new SSLConfig().with().sslSocketFactory(clientAuthFactory).and().allowAllHostnames();
 
-		System.out.println("config set>>>>>>>>>");
+		System.out.println("SSL config  set>>>>>>>>>");
 		restConfig = RestAssured.config().sslConfig(config);
-		System.out.println("config returned>>>>>>>>>");
+		System.out.println("SSL config returned to caller>>>>>>>>>");
 		// }
 		return restConfig;
 	}

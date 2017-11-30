@@ -15,13 +15,16 @@ public class Hooks {
 
 	@Before
 	public void before(Scenario scenario) {
-		Log.info("START SCENARIO *****: " + scenario.getName());
+		Log.info("********** START SCENARIO EXECUTION **********: " + scenario.getName());
+		
 
 	}
 
 	@After
 	public void after(Scenario scenario) {
-		Log.info("END SCENARIO *****: " + scenario.getName());
+		Log.info("TEST SCENARIO STATUS: " + scenario.getStatus().toUpperCase());
+		Log.info("********** END SCENARIO EXECUTION **********: " + scenario.getName());
+		
 
 
 	}
