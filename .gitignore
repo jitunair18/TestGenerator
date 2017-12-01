@@ -1,1 +1,5 @@
 target/
+*.log
+.project
+test-output/
+.DS_Store
