@@ -1,3 +1,4 @@
+# Master script to kick off the test generator utility and add attachments back to RQM
 #!/bin/sh
 # pass group as variable to master script
 BASEPATH=/local/rqm/services/swaggerParserUtility
