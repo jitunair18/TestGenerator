@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.ibmwatsonhealth.devopsservices.swaggertestasset</groupId>
-	<artifactId>swaggerParserUtility</artifactId>
+	<groupId>com.ibm.whc.devops</groupId>
+	<artifactId>testgenerator</artifactId>
 	<packaging>jar</packaging>
 	<version>0.01</version>
 
