@@ -3,3 +3,5 @@ target/
 .project
 test-output/
 .DS_Store
+.classpath
+.settings/
