@@ -16,7 +16,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 @CucumberOptions(features = "src/test/java/resources/features", glue = {
-		"com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.stepdefinitions" }, tags = {
+		"com.ibm.whc.devops.testgenerator.stepdefinitions" }, tags = {
 				"~@ignore" }, dryRun = false, format = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
 						"json:target/cucumber-reports/CucumberTestReport.json",
 						"rerun:target/cucumber-reports/rerun.txt" })
