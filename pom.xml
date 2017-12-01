@@ -28,7 +28,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestHarnessDriver</mainClass>
+							<mainClass>com.ibm.whc.devops.testgenerator.runner.TestHarnessDriver</mainClass>
 						</manifest>
 					</archive>
 					<outputDirectory>${project.basedir}</outputDirectory>
@@ -51,7 +51,7 @@
 						<configuration>
 							<archive>
 								<manifest>
-									<mainClass>com.ibmwatsonhealth.devopsservices.swaggertestasset.swaggerParserUtility.runner.TestHarnessDriver</mainClass>
+									<mainClass>com.ibm.whc.devops.testgenerator.runner.TestHarnessDriver</mainClass>
 									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 									<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 								</manifest>
