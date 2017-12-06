@@ -89,6 +89,7 @@ public class RESTFactory {
 			assertEquals(httpResponse.getStatusCode(), statusCode);
 
 		}
+		Log.info("Actual response status code: " + httpResponse.getStatusCode());
 
 	}
 
@@ -111,6 +112,7 @@ public class RESTFactory {
 			createResponseObject();
 			mimeType = httpResponse.getContentType();
 		}
+		Log.info("Actual response type: " + type);
 		if (mimeType.toUpperCase().contains(type.toUpperCase())) {
 			assertTrue(true);
 		} else {
@@ -246,8 +248,8 @@ public class RESTFactory {
 		} else {
 			fail("Actual response Time MILLISECONDS: " + actualResponseTime + " Expected response time MILLISECONDS: "
 					+ expectedResponseTime);
-			Log.fatal("Actual response Time MILLISECONDS: " + actualResponseTime + " Expected response time MILLISECONDS: "
-					+ expectedResponseTime);
+			Log.fatal("Actual response Time MILLISECONDS: " + actualResponseTime
+					+ " Expected response time MILLISECONDS: " + expectedResponseTime);
 
 		}
 
@@ -435,7 +437,7 @@ public class RESTFactory {
 				parameterValue = resolveGlobalVariable(parameterName);
 
 			}
-			Log.info("Path parameter: "+ parameterName + " Value: " + parameterValue);
+			Log.info("Path parameter: " + parameterName + " Value: " + parameterValue);
 			httpRequest.pathParam(parameterName, parameterValue);
 
 		}
@@ -459,7 +461,7 @@ public class RESTFactory {
 			String queryParameterName = payload.get(i).get(0);
 			String queryParameterValue = payload.get(i).get(1);
 			httpRequest.queryParam(queryParameterName, queryParameterValue);
-			Log.info("Query parameter: "+ queryParameterName + " Value: " + queryParameterValue);
+			Log.info("Query parameter: " + queryParameterName + " Value: " + queryParameterValue);
 
 		}
 
@@ -481,7 +483,7 @@ public class RESTFactory {
 			String headerParameterName = payload.get(i).get(0);
 			String headerParameterValue = payload.get(i).get(1);
 			httpRequest.header(headerParameterName, headerParameterValue);
-			Log.info("Request header : "+ headerParameterName + " Value: " + headerParameterValue);
+			Log.info("Request header : " + headerParameterName + " Value: " + headerParameterValue);
 		}
 
 	}
@@ -527,32 +529,37 @@ public class RESTFactory {
 	 */
 	public void createResponseObject() {
 		System.out.println("Entered method: createResponseObject()");
-		
+
 		switch (requestType.toUpperCase()) {
 
 		case "GET":
 			httpResponse = httpRequest.when().get(getURL);
-			System.out.println("Response content: "+ httpResponse.getBody().asString());
+			System.out.println("Actual Response content: " + httpResponse.getBody().asString());
+			Log.info("Actual Response content: " + httpResponse.getBody().asString());
 			break;
 
 		case "POST":
 			httpResponse = httpRequest.when().post(getURL);
-			System.out.println("Response content: "+httpResponse.getBody().asString());
+			System.out.println(" Actual Response content: " + httpResponse.getBody().asString());
+			Log.info("Actual Response content: " + httpResponse.getBody().asString());
 			break;
 
 		case "PUT":
 			httpResponse = httpRequest.when().put(getURL);
-			System.out.println("Response content: "+httpResponse.getBody().asString());
+			System.out.println("Actual Response content: " + httpResponse.getBody().asString());
+			Log.info("Actual Response content: " + httpResponse.getBody().asString());
 			break;
 
 		case "DELETE":
 			httpResponse = httpRequest.when().delete(getURL);
-			System.out.println("Response content: "+httpResponse.getBody().asString());
+			System.out.println("Actual Response content: " + httpResponse.getBody().asString());
+			Log.info("Actual Response content: " + httpResponse.getBody().asString());
 			break;
 
 		case "PATCH":
 			httpResponse = httpRequest.when().patch(getURL);
-			System.out.println("Response content: "+httpResponse.getBody().asString());
+			System.out.println("Actual Response content: " + httpResponse.getBody().asString());
+			Log.info("Actual Response content: " + httpResponse.getBody().asString());
 			break;
 
 		case "ASYNCHRONOUSGET":
@@ -561,6 +568,7 @@ public class RESTFactory {
 				String responseParameterValue = (String) globalDataDictionary.get("responseWaitParameterValue");
 				int responseWaitTime = ((int) globalDataDictionary.get("responseWaitTime"));
 				httpResponse = waitForApiResponse(responseParameter, responseParameterValue, responseWaitTime);
+				Log.info("Final Response content after processing: " + httpResponse.getBody().asString());
 			} catch (NumberFormatException e) {
 				Log.error("Number format exception thrown when processing asynchronously:", e);
 
@@ -585,11 +593,12 @@ public class RESTFactory {
 		Response result = null;
 		long maxTimeOut = timeout * 1000;
 		long lStartTime = System.currentTimeMillis();
-
+		Log.info("Expected value to poll: " + expectedValue);
 		while (System.currentTimeMillis() - lStartTime < maxTimeOut) {
 			result = httpRequest.when().get(getURL);
-			System.out.print(result.getBody().asString());
+			System.out.println(result.getBody().asString());
 			System.out.println("Expected value to poll: " + expectedValue);
+			Log.info("Processing: " + result.getBody().asString());
 			if (result.jsonPath().getString(searchXpath).contains(expectedValue)) {
 				return result;
 			} else {
@@ -604,7 +613,6 @@ public class RESTFactory {
 	// set global variables for the test scenarios
 	public void setGlobalVariablesfromResponse(String inputData) {
 
-		
 		System.out.println("Entered method: setGlobalVariablesfromResponse()");
 		String variableValue = null;
 		if (httpResponse != null) {
@@ -618,10 +626,10 @@ public class RESTFactory {
 		// String variableValue =
 		// JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
 		try {
-		variableValue = JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
-		}catch(Exception e) {
-			Log.error("Message not found in response: "+ inputData, e);
-			fail("Message not found in response: "+ inputData + " Http Response:" + httpResponse.getBody().asString());
+			variableValue = JsonPath.from(httpResponse.getBody().asString()).getString(inputData);
+		} catch (Exception e) {
+			Log.error("Message not found in response: " + inputData, e);
+			fail("Message not found in response: " + inputData + " Http Response:" + httpResponse.getBody().asString());
 		}
 		System.out.print("Set global key: " + inputData);
 		System.out.print("Set global value: " + variableValue);
@@ -641,7 +649,6 @@ public class RESTFactory {
 	// set up asynchronous request type
 	public void getAsynchronousRequest(String url) {
 
-		
 		System.out.println("Entered method: getAsynchronousRequest()");
 		Log.info("Endpoint Request url : " + url);
 		getURL = url;
