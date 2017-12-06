@@ -21,12 +21,12 @@ Scenario: Create new SQL DDL Schema in Datamart
 	And response status code should be 201 
 	
 	# check if asynchronous processing is completed
-	# variables tagged {global} would be resolved before execution
+	# variables tagged ${global} would be resolved before execution
 	# build the http request object
 	When user sends asynchronous GET request to "https://idmz-dp.ci41.lsf04.ibmwhc.net:9443/datamart/api/v1/{id}" 
 	And path parameter with 
 		| key    | value        |
-		| id  | {global} |
+		| id  | ${GLOBAL} |
 	And header with 
 		| key    | value        |
 		| Accept   | application/json |
