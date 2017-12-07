@@ -39,7 +39,7 @@ import com.jayway.restassured.specification.RequestSpecification;
 import cucumber.api.DataTable;
 
 @SuppressWarnings("deprecation")
-public class RESTFactory {
+public class RestFactory {
 
 	static RequestSpecification httpRequest = null;
 	static Response httpResponse = null;
@@ -602,7 +602,7 @@ public class RESTFactory {
 			if (result.jsonPath().getString(searchXpath).contains(expectedValue)) {
 				return result;
 			} else {
-				TimeUnit.SECONDS.sleep(RESTConstants.ASYNCPOLLINGINTERVAL);
+				TimeUnit.SECONDS.sleep(RestConstants.ASYNCPOLLINGINTERVAL);
 			}
 		}
 		fail("Timed out after waiting for " + timeout + " seconds" + " Endpoint: " + getURL);
