@@ -2,7 +2,7 @@ package com.ibm.whc.devops.testgenerator.stepdefinitions;
 
 import org.testng.Assert;
 
-import com.ibm.whc.devops.testgenerator.domain.RESTFactory;
+import com.ibm.whc.devops.testgenerator.domain.RestFactory;
 import com.ibm.whc.devops.testgenerator.swaggerParserUtility.SwaggerInformation;
 import com.ibm.whc.devops.testgenerator.swaggerParserUtility.SwaggerUtility;
 
@@ -14,7 +14,7 @@ import cucumber.api.java.en.When;
 
 public class StepDefinitionsRestServices extends SwaggerInformation {
 
-	RESTFactory rt = new RESTFactory();
+	RestFactory rt = new RestFactory();
 
 	@SuppressWarnings("unused")
 	private SwaggerInformation swaggerInstance;
